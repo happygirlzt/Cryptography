@@ -1,0 +1,9 @@
+#+TITLE: Cryptography
+#+DATE: <2018-04-22 Sun>
+
+I find cryptography very interesting!
+
+ I want to implement some common cryptography algorithms.
+
+And, not limited to algorithms. As there is already library in Python which has implemented many algorithms.
+
