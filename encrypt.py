@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Knowledge:
 # AES: Advanced Encryption Standard
 # Symmetric Cipher
@@ -59,7 +61,7 @@ def getKey(password):
     return hasher.digest()
 
 def Main():
-    choice = input("Would you like to (E)ncrypt of (D)ecrypt?: ")
+    choice = input("Would you like to (E)ncrypt of (D)ecrypt?: ").upper()
 
     if choice == 'E':
         filename = input("File to encrypt: ")
