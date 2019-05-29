@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # 有bug。。不过暂时找不出来。。
 
 from math import fmod, pow
@@ -36,14 +38,14 @@ if __name__ == "__main__":
 
     msg = 30.0
 
-    print("Message data = %f" % msg)
+    print("Message data = {}".format(msg))
 
     # Encryption c = (msg ^ e) % n
     c = msg ** e
     c = fmod(c, n)
-    print("\nEncrpyted data = %f" % c)
+    print("\nEncrpyted data = {}".format(c))
 
     # Decryption m = (c ^ d) % n
     m = c ** d
     m = fmod(m, n)
-    print("\nOriginal Message Sent = %f" % m)
+    print("\nOriginal Message Sent = {}".format(m)

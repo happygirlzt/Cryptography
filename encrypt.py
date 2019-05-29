@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Knowledge:
 # AES: Advanced Encryption Standard
 # Symmetric Cipher
@@ -13,7 +15,7 @@ from Crypto import Random
 
 def encrypt(key, filename):
     chunksize = 64*1024
-    outputFile = "(encrypted)"+filename
+    outputFile = filename + "_enc"
     filesize = str(os.path.getsize(filename)).zfill(16)
     IV = Random.new().read(16)
 
@@ -36,7 +38,7 @@ def encrypt(key, filename):
 
 def decrypt(key, filename):
     chunksize = 64*1024
-    outputFile = filename[11:]
+    outputFile = filename + "_dec"
 
     with open(filename, 'rb') as infile:
         filesize = int(infile.read(16))
@@ -59,7 +61,7 @@ def getKey(password):
     return hasher.digest()
 
 def Main():
-    choice = input("Would you like to (E)ncrypt of (D)ecrypt?: ")
+    choice = input("Would you like to (E)ncrypt of (D)ecrypt?: ").upper()
 
     if choice == 'E':
         filename = input("File to encrypt: ")
